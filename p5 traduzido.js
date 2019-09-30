@@ -1,4 +1,4 @@
-/*! p5.js v0.9.0 July 01, 2019 */
+@name Drawing/*! p5.js v0.9.0 July 01, 2019 */
 (function(f) {
   if (typeof exports === 'object' && typeof module !== 'undefined') {
     module.exports = f();
@@ -54083,7 +54083,7 @@
               '0': {
                 fileType: 'image',
                 method: 'loadImage',
-                message: ' hosting the image online,'
+                message: ''
               },
 
               '1': {
@@ -55577,23 +55577,11 @@
                         writable: true
                       });
 
-                      log(
-                        'Você acabou de mudar o valor de:  "' +
-                          prop +
-                          '", que era uma função interna do nosso sistema ' +
-                          ". Talvez isso cause problemas se usado incorretamente, " +
-                          'confira no guia se tudo está certo.'
-                      );
+
                     }
                   });
                 } catch (e) {
-                  log(
-                    'O sistema teve problemas criando a global "' +
-                      prop +
-                      '", ' +
-                      'possivelmente seu código está usando esse nome como uma ' +
-                      'variável. Talvez você deva mudar o nome da sua variavel para algo diferente '
-                  );
+
 
                   globalObject[prop] = value;
                 }
