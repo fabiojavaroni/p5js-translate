@@ -1,4 +1,4 @@
-@name Drawing/*! p5.js v0.9.0 July 01, 2019 */
+/*! p5.js v0.9.0 July 01, 2019 */
 (function(f) {
   if (typeof exports === 'object' && typeof module !== 'undefined') {
     module.exports = f();
@@ -54083,7 +54083,7 @@
               '0': {
                 fileType: 'image',
                 method: 'loadImage',
-                message: ''
+                message: ' hosting the image online,'
               },
 
               '1': {
@@ -54140,15 +54140,15 @@
                 message = errorInfo.message;
               } else {
                 message =
-                  'Parece que ouve um erro carregando' +
-                  ' isso: ' +
+                  'It looks like there was a problem' +
+                  ' loading your ' +
                   errorInfo.fileType +
                   '.' +
-                  ' Verifique se o caminho do arquivo [' +
+                  ' Try checking if the file path [' +
                   filePath +
-                  '] está correto! ' +
+                  '] is correct,' +
                   (errorInfo.message || '') +
-                  ' Lembre-se de conferir se escreveu tudo corretamente.';
+                  ' or running a local server.';
               }
               report(message, errorInfo.method, 3);
             };
@@ -54740,13 +54740,13 @@
 
               if (e.message && e.message.match('\\W?' + symbol.name + '\\W') !== null) {
                 log(
-                  "Você acabou de tentar usar essa função:  " +
+                  "Did you just try to use p5.js's " +
                     symbol.name +
                     (symbol.type === 'function' ? '() ' : ' ') +
                     symbol.type +
-                    '? Se sim, talvez você deva tentar ' +
-                    "mover ela para dentro da função setup() do programa!.\n\n" +
-                    'Confira se escreveu tudo corretamente de acordo com o guia.' +
+                    '? If so, you may want to ' +
+                    "move it into your sketch's setup() function.\n\n" +
+                    'For more details, see: ' +
                     FAQ_URL
                 );
 
@@ -55576,10 +55576,12 @@
                         value: newValue,
                         writable: true
                       });
-                      log();
+
+                      log('');
                     }
                   });
                 } catch (e) {
+                  log('');
                   globalObject[prop] = value;
                 }
               } else {
@@ -62703,7 +62705,7 @@
             if (this._validate(value)) {
               this.data[key] = value;
             } else {
-              console.log('Esses valores não funcionam nesse estilo de dicionário.');
+              console.log('Those values dont work for this dictionary type.');
             }
           };
 
@@ -62748,8 +62750,8 @@
               this.set(key, value);
             } else {
               console.log(
-                'Para criar uma nova entrada no dicionário, você deve passar valores como ' +
-                  'um objeto, uma chave ou um par de valores'
+                'In order to create a new Dictionary entry you must pass ' +
+                  'an object or a key, value pair'
               );
             }
           };
