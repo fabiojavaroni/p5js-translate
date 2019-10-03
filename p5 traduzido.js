@@ -55577,11 +55577,11 @@
                         writable: true
                       });
 
-                      log();
+                      //log();
                     }
                   });
                 } catch (e) {
-                  log();
+                  //log();
                   globalObject[prop] = value;
                 }
               } else {
