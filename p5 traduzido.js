@@ -55576,13 +55576,10 @@
                         value: newValue,
                         writable: true
                       });
-
-
+                      log();
                     }
                   });
                 } catch (e) {
-
-
                   globalObject[prop] = value;
                 }
               } else {
